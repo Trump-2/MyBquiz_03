@@ -267,22 +267,3 @@ function to($url)
 {
   header("location:$url");
 }
-
-$Total = new DB('total');
-$User = new DB('user');
-$News = new DB('news');
-$Que = new DB('que');
-$Log = new DB('log');
-
-if (!isset($_SESSION['visited'])) {
-  // 判斷今日日期的資料是否存在
-  if ($Total->count(['date' => date('Y-m-d')]) > 0) { // date() 裡面的格式是日期在資料庫的表示方式
-    $total = $Total->find(['date' => date('Y-m-d')]);
-    $total['total']++;
-    $Total->save($total);
-  } else {
-    $Total->save(['total' => 1, 'date' => date('Y-m-d')]);
-  }
-
-  $_SESSION['visited'] = 50;
-}
