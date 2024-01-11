@@ -1,5 +1,4 @@
-<!DOCTYPE html
-  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- saved from url=(0055)?do=admin -->
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -17,7 +16,7 @@
       <h1>ABC影城</h1>
     </div>
     <div id="top2">
-      <a href="index.htm">首頁</a>
+      <a href="index.php">首頁</a>
       <a href="index.php?do=order">線上訂票</a>
       <a href="#">會員系統</a>
       <a href="back.php">管理系統</a>
