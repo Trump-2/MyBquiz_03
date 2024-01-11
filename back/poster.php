@@ -39,8 +39,9 @@
             <input type="text" name="name[]" value="<?= $po['name'] ?>">
           </div>
           <div>
-            <input class="btn" type="button" value="往上" data-id="<?= $po['id'] ?>" data-switch="<?= ($idx !== 0) ? $pos[$idx - 1]['id'] : $po['id'] ?>"> <!-- data-sw 代表要現在這個交換的對象 -->
-            <input class="btn" type="button" value="往下" data-id="<?= $po['id'] ?>" data-switch="<?= ((count($pos) - 1) != $idx) ? $pos[$idx + 1]['id'] : $po['id'] ?>">
+            <!-- 這段要重聽，主要是為甚麼要加上 data-id、data-switch -->
+            <input class="btn" type="button" value="往上" data-id="<?= $po['id'] ?>" data-sw="<?= ($idx !== 0) ? $pos[$idx - 1]['id'] : $po['id'] ?>"> <!-- data-sw (switch) 代表要現在這個交換的對象 -->
+            <input class="btn" type="button" value="往下" data-id="<?= $po['id'] ?>" data-sw="<?= ((count($pos) - 1) != $idx) ? $pos[$idx + 1]['id'] : $po['id'] ?>">
           </div>
           <div style='color:black'>
             <input type="hidden" name="id[]" value="<?= $po['id'] ?>">
@@ -87,7 +88,7 @@
 <script>
   $(".btn").on('click', function() {
     let id = $(this).data('id');
-    let sw = $(this).data('switch');
+    let sw = $(this).data('sw');
 
     let table = 'poster'
     $.post("./api/sw.php", {
