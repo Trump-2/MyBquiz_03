@@ -8,7 +8,7 @@ if (isset($_FILES['poster']['tmp_name'])) {
 }
 
 $_POST['sh'] = 1;
-// 這裡要重聽，不太懂這麼寫的原因
+// 之後排序
 $_POST['rank'] = $Poster->max('id') + 1;
 $_POST['ani'] = rand(1, 3);
 
