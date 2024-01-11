@@ -7,7 +7,6 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>影城</title>
   <link rel="stylesheet" href="css/css.css">
-  <!-- <link href="css/s2.css" rel="stylesheet" type="text/css"> -->
   <script src="js/jquery-1.9.1.min.js"></script>
 </head>
 
@@ -17,7 +16,7 @@
       <h1>ABC影城</h1>
     </div>
     <div id="top2">
-      <a href="index.htm">首頁</a>
+      <a href="index.php">首頁</a>
       <a href="index.php?do=order">線上訂票</a>
       <a href="#">會員系統</a>
       <a href="back.php">管理系統</a>
@@ -38,7 +37,8 @@
       <div class="rb tab">
         <?php
 
-        ?>
+
+      ?>
       </div>
     </div>
     <div id="bo"> ©Copyright 2010~2014 ABC影城 版權所有 </div>
