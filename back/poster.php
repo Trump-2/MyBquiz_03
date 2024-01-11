@@ -1,17 +1,17 @@
 <style>
-.item {
-  display: flex;
-  padding: 3px;
-  margin: 3px;
-  justify-content: space-between;
-  align-items: center;
-}
+  .item {
+    display: flex;
+    padding: 3px;
+    margin: 3px;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-.item div {
-  /* width: 24.5%; */
-  margin: 0 0.25%;
-  text-align: center;
-}
+  .item div {
+    width: 24.5%;
+    margin: 0 0.25%;
+    text-align: center;
+  }
 </style>
 <div>
   <h3 class="ct">預告片清單</h3>
@@ -28,26 +28,26 @@
 
 
     ?>
-    <div class="item">
-      <div>
-        <img src="./img/<?= $po['img'] ?>" alt="" style="width:60px; height:80px;">
+      <div class="item">
+        <div>
+          <img src="./img/<?= $po['img'] ?>" alt="" style="width:60px; height:80px;">
+        </div>
+        <div>
+          <input type="text" name="name[]" value="<?= $po['name'] ?>">
+        </div>
+        <div>
+          <input type="button" value="往上"><input type="button" value="往下">
+        </div>
+        <div>
+          <input type="checkbox" name="sh[]" value="<?= $po['id'] ?>" <?= ($po['sh'] == 1) ? 'checked' : '' ?>>顯示
+          <input type="checkbox" name="del[]" value="<?= $po['id'] ?>">刪除
+          <select name="ani" id="">
+            <option value="1">淡入淡出</option>
+            <option value="2">縮放</option>
+            <option value="3">滑入滑出</option>
+          </select>
+        </div>
       </div>
-      <div>
-        <input type="text" name="name[]" value="<?= $po['name'] ?>">
-      </div>
-      <div>
-        <input type="button" value="往上"><input type="button" value="往下">
-      </div>
-      <div>
-        <input type="checkbox" name="sh[]" value="<?= $po['id'] ?>" <?= ($po['sh'] == 1) ? 'checked' : '' ?>>顯示
-        <input type="checkbox" name="del[]" value="<?= $po['id'] ?>">刪除
-        <select name="ani" id="">
-          <option value="1">淡入淡出</option>
-          <option value="2">縮放</option>
-          <option value="3">滑入滑出</option>
-        </select>
-      </div>
-    </div>
 
     <?php
     }
