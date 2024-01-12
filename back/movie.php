@@ -97,6 +97,7 @@ $(".show-btn").on("click", function() {
     // }
   });
 })
+
 $(".sw-btn").on('click', function() {
   let id = $(this).data('id');
   let sw = $(this).data('sw');
@@ -110,10 +111,12 @@ $(".sw-btn").on('click', function() {
     location.reload();
   })
 })
+
 $(".edit-btn").on('click', function() {
   let id = $(this).data('id');
   location.href = `?do=edit_movie&id=${id}`;
 })
+
 $(".del-btn").on('click', function() {
   let id = $(this).data('id');
   $.post("./api/del.php", {

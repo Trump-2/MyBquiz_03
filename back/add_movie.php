@@ -1,10 +1,10 @@
 <style>
-  .form td:nth-child(1) {
-    text-align-last: justify;
-    padding: 3px 5px;
-  }
+.form td:nth-child(1) {
+  text-align-last: justify;
+  padding: 3px 5px;
+}
 </style>
-<form action="./api/add_movie.php" method="post" enctype="multipart/form-data">
+<form action="./api/save_movie.php" method="post" enctype="multipart/form-data">
   <div style=" display:flex; align-items:start">
     <div style="width:15%">影片資料</div>
     <div style="width:85%">
