@@ -1,8 +1,8 @@
 <style>
-.form td:nth-child(1) {
-  text-align-last: justify;
-  padding: 3px 5px;
-}
+  .form td:nth-child(1) {
+    text-align-last: justify;
+    padding: 3px 5px;
+  }
 </style>
 <h2 class="ct">編輯院線片</h2>
 <?php
@@ -48,16 +48,19 @@ $movie = $Movie->find($_GET['id']);
             </select>年
             <select name="month" id="">
               <?php
-              for ($i = 1; $i <= 12; $i++)
+              for ($i = 1; $i <= 12; $i++) {
                 $selected =  ($month == $i) ? 'selected' : '';
-              echo "<option value='$i' $selected>$i</option>";
+                echo "<option value='$i' $selected>$i</option>";
+              }
               ?>
             </select>月
             <select name=" date" id="">
               <?php
-              for ($i = 1; $i <= 31; $i++)
+              for ($i = 1; $i <= 31; $i++) {
+
                 $selected =  ($date == $i) ? 'selected' : '';
-              echo "<option value='$i' $selected>$i</option>";
+                echo "<option value='$i' $selected>$i</option>";
+              }
               ?>
             </select>日
           </td>
