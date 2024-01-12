@@ -1,7 +1,7 @@
 <?php
 include_once "db.php";
 
-$row = $Movie->all($_POST['id']);
+$row = $Movie->find($_POST['id']);
 
 // 方法一
 $row['sh'] = ($row['sh'] == 1) ? 0 : 1;

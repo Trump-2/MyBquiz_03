@@ -81,7 +81,7 @@
     $.post("./api/show.php", {
       id
     }, () => {
-      // 方法一
+      // 方法一，跟 server 重新要整份資料
       location.reload();
 
       // 方法二
