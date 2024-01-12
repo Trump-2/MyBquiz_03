@@ -1,76 +1,76 @@
 <style>
-  .lists {
-    /* position: relative; */
-    left: 114px;
-  }
+.lists {
+  /* position: relative; */
+  left: 114px;
+}
 
-  .item * {
-    box-sizing: border-box;
-  }
+.item * {
+  box-sizing: border-box;
+}
 
-  .item {
-    width: 200px;
-    height: 240px;
-    margin: auto;
-    box-sizing: border-box;
-    display: none;
-  }
+.item {
+  width: 200px;
+  height: 240px;
+  margin: auto;
+  box-sizing: border-box;
+  display: none;
+}
 
-  .item div img {
-    width: 100%;
-    height: 220px;
-  }
+.item div img {
+  width: 100%;
+  height: 220px;
+}
 
-  .item div {
-    text-align: center;
-  }
+.item div {
+  text-align: center;
+}
 
-  .left,
-  .right {
-    width: 0;
-    border: 20px solid black;
-    border-top-color: transparent;
-    border-bottom-color: transparent;
+.left,
+.right {
+  width: 0;
+  border: 20px solid black;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
 
-  }
+}
 
-  .left {
-    border-left-width: 0;
-  }
+.left {
+  border-left-width: 0;
+}
 
-  .right {
-    border-right-width: 0;
-  }
+.right {
+  border-right-width: 0;
+}
 
-  .btns {
-    width: 360px;
-    height: 100px;
-    display: flex;
-    overflow: hidden;
-  }
+.btns {
+  width: 360px;
+  height: 100px;
+  display: flex;
+  overflow: hidden;
+}
 
-  .btn img {
-    width: 60px;
-    height: 80px;
-  }
+.btn img {
+  width: 60px;
+  height: 80px;
+}
 
-  .btn {
-    font-size: 12px;
-    text-align: center;
-    flex-shrink: 0;
-    width: 90px;
-    position: relative;
-  }
+.btn {
+  font-size: 12px;
+  text-align: center;
+  flex-shrink: 0;
+  width: 90px;
+  position: relative;
+}
 
-  .controls {
-    width: 420px;
-    height: 100px;
-    position: relative;
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+.controls {
+  width: 420px;
+  height: 100px;
+  position: relative;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 </style>
 
 <div class="half" style="vertical-align:top;">
@@ -84,10 +84,10 @@
       foreach ($posters as $idx => $poster) {
 
       ?>
-        <div class="item">
-          <div><img src="./img/<?= $poster['img'] ?>" alt=""></div>
-          <div><?= $poster['name'] ?></div>
-        </div>
+      <div class="item">
+        <div><img src="./img/<?= $poster['img'] ?>" alt=""></div>
+        <div><?= $poster['name'] ?></div>
+      </div>
       <?php
       }
 
@@ -101,10 +101,10 @@
 
 
         ?>
-          <div class="btn">
-            <div><img src="./img/<?= $poster['img'] ?>" alt=""></div>
-            <div><?= $poster['name'] ?></div>
-          </div>
+        <div class="btn">
+          <div><img src="./img/<?= $poster['img'] ?>" alt=""></div>
+          <div><?= $poster['name'] ?></div>
+        </div>
         <?php
 
         }
@@ -116,65 +116,65 @@
   </div>
 </div>
 <script>
-  $(".item").eq(0).show();
-  let timer = setInterval(() => {
-    slide()
-  }, 3000) c04
+$(".item").eq(0).show();
+let timer = setInterval(() => {
+  slide()
+}, 3000)
 
-  let now = 0;
+let now = 0;
 
-  function slide() {
-    $(".item").hide();
+function slide() {
+  $(".item").hide();
 
-    now++;
-    if (now > 8) {
-      now = 0;
-    }
-    $(".item").eq(now).show();
+  now++;
+  if (now > 8) {
+    now = 0;
   }
+  $(".item").eq(now).show();
+}
 
-  let total = $(".btn").length;
-  let t = 0;
-  console.log(total);
-  $(".left,.right").on('click', function() {
-    let arrow = $(this).attr('class');
-    switch (arrow) {
-      case "right":
-        if (t + 1 <= (total - 4)) {
+let total = $(".btn").length;
+let t = 0;
+console.log(total);
+$(".left,.right").on('click', function() {
+  let arrow = $(this).attr('class');
+  switch (arrow) {
+    case "right":
+      if (t + 1 <= (total - 4)) {
 
-          t = t + 1;
-        }
+        t = t + 1;
+      }
 
-        break;
-      case "left":
-        if (t - 1 >= 0) {
+      break;
+    case "left":
+      if (t - 1 >= 0) {
 
-          t = t - 1;
-        }
-        break;
-    }
-    $(".btn").animate({
-      right: 90 * t // 這個 t 是次數，自定義的
-    })
+        t = t - 1;
+      }
+      break;
+  }
+  $(".btn").animate({
+    right: 90 * t // 這個 t 是次數，自定義的
   })
+})
 </script>
 
 <style>
-  .movies {
-    display: flex;
-    flex-wrap: wrap;
-  }
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-  .movie {
-    display: flex;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-    padding: 2px;
-    margin: 0.5%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 49%;
-  }
+.movie {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 2px;
+  margin: 0.5%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 49%;
+}
 </style>
 
 <div class="half">
@@ -193,22 +193,22 @@
       $movies = $Movie->all(" where `ondate` >='$ondate' && `ondate` <= '$today' && `sh` = 1 order by rank limit $start,$div");
       foreach ($movies as $movie) {
       ?>
-        <div class="movie">
-          <div style="width:35%">
-            <a href="?do=intro&id=<?= $movie['id'] ?>">
-              <img src="./img/<?= $movie['poster'] ?>" style="width:60px;border:3px solid white">
-            </a>
-          </div>
-          <div style="width:65%">
-            <div><?= $movie['name'] ?></div>
-            <div style="font-size:12px">分級: <img src="./icon/03C0<?= $movie['level'] ?>.png" style="width:20px"></div>
-            <div style="font-size:12px">上映日期:<?= $movie['ondate'] ?></div>
-          </div>
-          <div style="width:100%">
-            <button onclick="location.href='?do=intro&id=<?= $movie['id'] ?>'">劇情介紹</button>
-            <button onclick="location.href='?do=order&id=<?= $movie['id'] ?>'">線上訂票</button>
-          </div>
+      <div class="movie">
+        <div style="width:35%">
+          <a href="?do=intro&id=<?= $movie['id'] ?>">
+            <img src="./img/<?= $movie['poster'] ?>" style="width:60px;border:3px solid white">
+          </a>
         </div>
+        <div style="width:65%">
+          <div><?= $movie['name'] ?></div>
+          <div style="font-size:12px">分級: <img src="./icon/03C0<?= $movie['level'] ?>.png" style="width:20px"></div>
+          <div style="font-size:12px">上映日期:<?= $movie['ondate'] ?></div>
+        </div>
+        <div style="width:100%">
+          <button onclick="location.href='?do=intro&id=<?= $movie['id'] ?>'">劇情介紹</button>
+          <button onclick="location.href='?do=order&id=<?= $movie['id'] ?>'">線上訂票</button>
+        </div>
+      </div>
 
       <?php
       }
